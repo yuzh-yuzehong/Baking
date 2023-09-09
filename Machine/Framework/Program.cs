@@ -18,6 +18,7 @@ namespace Machine
                 ShowMsgBox.ShowDialog(Application.ProductName + "已经运行！", MessageType.MsgAlarm);
                 return;
             }
+
             try
             {
                 Application.EnableVisualStyles();
