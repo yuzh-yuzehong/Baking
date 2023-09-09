@@ -1,0 +1,540 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{18CAA1BF-ABFF-445C-B4A8-BB2EA04D83E2}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Machine</RootNamespace>
+    <AssemblyName>Machine</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>D:\AnbinLY\Job\SY02\Machine\deploy\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ProductName>Machine</ProductName>
+    <PublisherName>Machine</PublisherName>
+    <SuiteName>Machine</SuiteName>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SonarQubeExclude>True</SonarQubeExclude>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+    <DocumentationFile>
+    </DocumentationFile>
+    <RunCodeAnalysis>true</RunCodeAnalysis>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>false</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>..\bin\Debug\System\Logo\Logo.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignAssembly>false</SignAssembly>
+  </PropertyGroup>
+  <PropertyGroup>
+    <DelaySign>false</DelaySign>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.3.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.3.1\lib\BouncyCastle.Crypto.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Google.Protobuf, Version=3.6.1.0, Culture=neutral, PublicKeyToken=a7d26565bac4d604, processorArchitecture=MSIL">
+      <HintPath>..\packages\Google.Protobuf.3.6.1\lib\net45\Google.Protobuf.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="HelperLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>SystemControlLibrary\Library\HelperLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="log4net, Version=2.0.14.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.14\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Excel.15.0.4795.1000\lib\net20\Microsoft.Office.Interop.Excel.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualStudio.QualityTools.UnitTestFramework, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.8.8.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <HintPath>..\packages\MySql.Data.6.8.8\lib\net45\MySql.Data.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="SystemControlLibrary, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>SystemControlLibrary\Library\SystemControlLibrary.dll</HintPath>
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Framework\BarcodeScan.cs" />
+    <Compile Include="Framework\Controls\DataGridViewNF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Framework\Controls\DataGridViewCheckBoxTextColumn.cs" />
+    <Compile Include="Framework\Controls\RollText.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="Framework\DataBaseLog.cs" />
+    <Compile Include="Framework\DryingOven\DryingOvenClient.cs" />
+    <Compile Include="Framework\Controls\FormEx.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Framework\GZipCompress.cs" />
+    <Compile Include="Framework\MySQL\MySqlUploadingRecord.cs" />
+    <Compile Include="Framework\MySQL\MySqlFeedingRecord.cs" />
+    <Compile Include="Framework\Socket\FinsDef.cs" />
+    <Compile Include="Framework\Socket\FinsUDP.cs" />
+    <Compile Include="Framework\Socket\HttpClient.cs" />
+    <Compile Include="Framework\ModuleSocket\ModuleClient.cs" />
+    <Compile Include="Framework\ModuleSocket\ModuleServer.cs" />
+    <Compile Include="Framework\ModuleSocket\ModuleSocketDef.cs" />
+    <Compile Include="Framework\BatteryLine.cs" />
+    <Compile Include="Framework\Mes\MesOperateMySql.cs" />
+    <Compile Include="Framework\MySQL\MySqlRealData.cs" />
+    <Compile Include="Framework\MySQL\MySqlEquipmentAlarm.cs" />
+    <Compile Include="Framework\MySQL\MySqlHelper.cs" />
+    <Compile Include="Framework\MySQL\MySqlEquipmentReal.cs" />
+    <Compile Include="Framework\MySQL\MySqlEquipmentOperation.cs" />
+    <Compile Include="Framework\MySQL\MySqlProductionRecord.cs" />
+    <Compile Include="Framework\Robot\RobotIOCommunication.cs" />
+    <Compile Include="Framework\Socket\ComPort.cs" />
+    <Compile Include="Framework\ModuleSocket\ModuleSocketData.cs" />
+    <Compile Include="Framework\Socket\FinsTCP.cs" />
+    <Compile Include="Framework\Socket\FTPClient.cs" />
+    <Compile Include="Framework\Socket\ServerSocket.cs" />
+    <Compile Include="Framework\IniStream.cs" />
+    <Compile Include="Framework\Mes\MesDefine.cs" />
+    <Compile Include="Framework\Socket\TcpSocket.cs" />
+    <Compile Include="Framework\Socket\UdpSocket .cs" />
+    <Compile Include="Framework\Thread\BaseThreadEx.cs" />
+    <Compile Include="RunProcess\RunProcessCoolingOffload.cs" />
+    <Compile Include="RunProcess\RunProcessCoolingSystem.cs" />
+    <Compile Include="RunProcess\RunProcessOnloadRecv.cs" />
+    <Compile Include="UI\MesDataPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MesDataPage.Designer.cs">
+      <DependentUpon>MesDataPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MesInfoPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MesInfoPage.Designer.cs">
+      <DependentUpon>MesInfoPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MesParameterPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MesParameterPage.Designer.cs">
+      <DependentUpon>MesParameterPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RunProcess\RunProcessOffloadBattery.cs" />
+    <Compile Include="RunProcess\RunProcessOnloadScan.cs" />
+    <Compile Include="Framework\Controls\TipDlg.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DryingOvenPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DryingOvenPage.Designer.cs">
+      <DependentUpon>DryingOvenPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\Thread\BaseThread.cs" />
+    <Compile Include="Framework\Battery.cs" />
+    <Compile Include="Framework\Controls\IOButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Framework\Controls\ListViewNF.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Framework\DryingOven\DryingOvenData.cs" />
+    <Compile Include="Framework\MachineCtrl.cs" />
+    <Compile Include="Framework\MachineDef.cs" />
+    <Compile Include="Framework\ManualDebugCheck.cs" />
+    <Compile Include="Framework\Pallet.cs" />
+    <Compile Include="Framework\Robot\RobotClient.cs" />
+    <Compile Include="Framework\Robot\RobotDef.cs" />
+    <Compile Include="Framework\DryingOven\DryingOvenDef.cs" />
+    <Compile Include="Framework\Robot\RobotSocketGeneral.cs" />
+    <Compile Include="RunProcess\RunProcess.cs" />
+    <Compile Include="RunProcess\RunProcessDryingOven.cs" />
+    <Compile Include="RunProcess\RunProcessPalletBuffer.cs" />
+    <Compile Include="RunProcess\RunProcessManualOperate.cs" />
+    <Compile Include="RunProcess\RunProcessOffloadDetectFake.cs" />
+    <Compile Include="RunProcess\RunProcessOffloadLine.cs" />
+    <Compile Include="RunProcess\RunProcessOffloadNG.cs" />
+    <Compile Include="RunProcess\RunProcessOnloadNG.cs" />
+    <Compile Include="RunProcess\RunProcessOnloadFake.cs" />
+    <Compile Include="RunProcess\RunProcessOnloadLine.cs" />
+    <Compile Include="RunProcess\RunProcessOnloadRobot.cs" />
+    <Compile Include="RunProcess\RunProcessRobotTransfer.cs" />
+    <Compile Include="RunProcess\RunProTest.cs" />
+    <Compile Include="UI\DebugToolsPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\DebugToolsPage.Designer.cs">
+      <DependentUpon>DebugToolsPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\HistoryPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\HistoryPage.Designer.cs">
+      <DependentUpon>HistoryPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MaintenancePage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MaintenancePage.Designer.cs">
+      <DependentUpon>MaintenancePage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MesSetPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MesSetPage.Designer.cs">
+      <DependentUpon>MesSetPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ModifyMotorParameterPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ModifyMotorParameterPage.Designer.cs">
+      <DependentUpon>ModifyMotorParameterPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ModifyMotorPosPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ModifyMotorPosPage.Designer.cs">
+      <DependentUpon>ModifyMotorPosPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ModuleMonitorPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ModuleMonitorPage.Designer.cs">
+      <DependentUpon>ModuleMonitorPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\OtherDebugPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\OtherDebugPage.Designer.cs">
+      <DependentUpon>OtherDebugPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\OverViewPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\OverViewPage.Designer.cs">
+      <DependentUpon>OverViewPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\MaintenanceLockPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\MaintenanceLockPage.Designer.cs">
+      <DependentUpon>MaintenanceLockPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\ParameterPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\ParameterPage.Designer.cs">
+      <DependentUpon>ParameterPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Framework\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UI\RobotPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\RobotPage.Designer.cs">
+      <DependentUpon>RobotPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserManager.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UserManager.Designer.cs">
+      <DependentUpon>UserManager.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UserLogin.Designer.cs">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UserPasswordsModify.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UserPasswordsModify.Designer.cs">
+      <DependentUpon>UserPasswordsModify.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UI\UpDataWaterPage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UI\UpDataWaterPage.Designer.cs">
+      <DependentUpon>UpDataWaterPage.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Framework\Controls\TipDlg.resx">
+      <DependentUpon>TipDlg.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DebugToolsPage.resx">
+      <DependentUpon>DebugToolsPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\DryingOvenPage.resx">
+      <DependentUpon>DryingOvenPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\HistoryPage.resx">
+      <DependentUpon>HistoryPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MaintenancePage.resx">
+      <DependentUpon>MaintenancePage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MesDataPage.resx">
+      <DependentUpon>MesDataPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MesInfoPage.resx">
+      <DependentUpon>MesInfoPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MesParameterPage.resx">
+      <DependentUpon>MesParameterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MesSetPage.resx">
+      <DependentUpon>MesSetPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ModifyMotorParameterPage.resx">
+      <DependentUpon>ModifyMotorParameterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ModifyMotorPosPage.resx">
+      <DependentUpon>ModifyMotorPosPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ModuleMonitorPage.resx">
+      <DependentUpon>ModuleMonitorPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\OtherDebugPage.resx">
+      <DependentUpon>OtherDebugPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\OverViewPage.resx">
+      <DependentUpon>OverViewPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\MaintenanceLockPage.resx">
+      <DependentUpon>MaintenanceLockPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\ParameterPage.resx">
+      <DependentUpon>ParameterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\RobotPage.resx">
+      <DependentUpon>RobotPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserManager.resx">
+      <DependentUpon>UserManager.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserLogin.resx">
+      <DependentUpon>UserLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UserPasswordsModify.resx">
+      <DependentUpon>UserPasswordsModify.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UI\UpDataWaterPage.resx">
+      <DependentUpon>UpDataWaterPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="log4net.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Init_Selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\State.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\CaptionICO.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="更新记录.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DebugTools_Selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\History_Selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maintenance_Selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MESSet_Selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ModuleMonitor_Selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OverView_Selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Parameter_Selected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\DebugTools_Unselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\History_Unselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Maintenance_Unselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\MESSet_Unselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ModuleMonitor_Unselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\OverView_Unselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Parameter_Unselected.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.5.2">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.5.2 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ToolbarBKG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action\ActionBarBKG.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action\Quit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action\Reset.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action\Restart.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action\Start.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action\Stop.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Action\User.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserLogin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\UserLogout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\SplitLine.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
